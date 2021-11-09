@@ -87,3 +87,49 @@
         }
     }
 }
+
+.music {
+    &__player {
+        position: fixed;
+        bottom: -125px;
+        left: 0;
+        right: 0;
+        background: #fff;
+        z-index: 1000;
+
+        & .music__title {
+            font-size: 25px;
+            margin-bottom: 5px;
+            border-top: 5px solid #333;
+            border-bottom: 1px solid #333;
+            text-align: center;
+            color: #333;
+            padding: 10px;
+        }
+
+        & audio {
+            width: 100%;
+        }
+
+        & audio::-webkit-media-controls-enclosure {
+            border-radius: 0;
+            background: #fff;
+        }
+
+        & #close-player {
+            position: absolute;
+            top: -50px;
+            right: 5px;
+            height: 50px;
+            width: 55px;
+            line-height: 50px;
+            cursor: pointer;
+            font-size: 25px;
+            color: #333;
+            background: #fff;
+            border: 3px solid #333;
+            border-bottom: none;
+            text-align: center;
+        }
+    }
+}
