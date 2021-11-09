@@ -75,6 +75,20 @@
   color: #fff;
 }
 
+@media (max-width: 768px) {
+  .container .card__container {
+    padding: 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 530px) {
+  .container .card__container {
+    grid-template-columns: 1fr;
+  }
+  .container .card__container .card .card__image {
+    height: 400px;
+  }
+}
 .music__player {
   position: fixed;
   bottom: -125px;
