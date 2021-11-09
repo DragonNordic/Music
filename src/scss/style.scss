@@ -148,6 +148,10 @@
             border-bottom: none;
             text-align: center;
         }
+
+        &.active {
+            bottom: 0;
+        }
     }
 }
 
