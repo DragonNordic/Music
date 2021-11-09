@@ -1,1 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
 
+*{
+  font-family: 'Poppins', sans-serif;
+  margin:0; 
+  padding:0;
+  box-sizing: border-box;
+  outline: none; 
+  border:none;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: .2s linear;
+}
+
+.container {
+
+    & .header {
+        text-align: center;
+        padding:10px;
+        color:#333;
+        font-size: 35px;
+        border-bottom: 3px solid #333;
+    }
+
+    & .card__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap:20px;
+        padding:20px 9%;
+        background: #eee;
+
+        &.active {
+            padding-bottom: 150px;
+        }
+
+        & .card {
+            border-radius: 10px;
+            background:#fff;
+            box-shadow: 0 5px 10px rgba(0,0,0,.2);
+            padding:15px;
+            cursor: pointer;
+
+            &:hover .card__image .card__play{
+                display: flex;
+            } 
+
+            & .card__content{
+                padding-top: 15px;
+
+                & h3 {
+                    font-size: 20px;
+                    color:#333;
+                }
+            }
+
+            & .card__image {
+                height:540px;
+                width: 100%;
+                overflow: hidden;
+                border-radius: 10px;
+                position: relative;
+
+                & img{
+                    height:100%;
+                    width:100%;
+                    object-fit: cover;
+                }
+
+                & .card__play{
+                    position: absolute;
+                    top:0; left:0;
+                    height: 100%;
+                    width:100%;
+                    background: rgba(0,0,0,.8);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    z-index: 10;
+                    display: none;
+
+                    & i{
+                        font-size: 100px;
+                        color:#fff;
+                    }
+                }
+            }
+        }
+    }
+}

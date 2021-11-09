@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s linear;
+}
+
+.container .header {
+  text-align: center;
+  padding: 10px;
+  color: #333;
+  font-size: 35px;
+  border-bottom: 3px solid #333;
+}
+.container .card__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 9%;
+  background: #eee;
+}
+.container .card__container.active {
+  padding-bottom: 150px;
+}
+.container .card__container .card {
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  cursor: pointer;
+}
+.container .card__container .card:hover .card__image .card__play {
+  display: flex;
+}
+.container .card__container .card .card__content {
+  padding-top: 15px;
+}
+.container .card__container .card .card__content h3 {
+  font-size: 20px;
+  color: #333;
+}
+.container .card__container .card .card__image {
+  height: 540px;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+.container .card__container .card .card__image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.container .card__container .card .card__image .card__play {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  display: none;
+}
+.container .card__container .card .card__image .card__play i {
+  font-size: 100px;
+  color: #fff;
+}
+/*# sourceMappingURL=style.css.map */
